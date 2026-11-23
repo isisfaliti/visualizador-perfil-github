@@ -133,3 +133,12 @@
     font-size: var(--font-xs);
   }
 }
+
+/* Estilo JS */
+
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+}

@@ -144,3 +144,76 @@ main {
 .container .profile-results.hide {
   display: none;
 }
+
+/* Estilo feito pela Claude */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 28rem;
+    margin: var(--spacing-lg) auto 0;
+    padding: var(--spacing-lg);
+}
+
+.profile-card .avatar {
+    width: 136px;
+    height: 136px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-card .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+    min-width: 0;
+}
+
+.profile-card .profile-info h2 {
+    font-size: var(--font-xl);
+    font-weight: 700;
+    color: #1f1f1f;
+}
+
+.profile-card .profile-info p {
+    font-size: var(--font-sm);
+    line-height: 1.5;
+    color: var(--muted-foreground);
+}
+
+/* Para o carregamento */
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  color: var(--muted-foreground);
+  font-size: var(--font-sm);
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container header #btn-search:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
